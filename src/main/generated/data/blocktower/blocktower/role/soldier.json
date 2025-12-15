@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Soldier",
+  "description": "You are safe from the demon.",
+  "icon": {
+    "count": 1,
+    "id": "minecraft:shield"
+  }
+}

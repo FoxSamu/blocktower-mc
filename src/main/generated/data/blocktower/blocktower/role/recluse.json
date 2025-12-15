@@ -1,0 +1,9 @@
+{
+  "type": "outsider",
+  "name": "Recluse",
+  "description": "You might register as a minion or demon, even if you're dead.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:gas_lamp"
+  }
+}

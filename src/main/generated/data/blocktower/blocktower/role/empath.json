@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Empath",
+  "description": "Each night, you learn how many of your 2 alive neighbours are evil.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:empathy"
+  }
+}

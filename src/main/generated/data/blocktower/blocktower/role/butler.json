@@ -1,0 +1,9 @@
+{
+  "type": "outsider",
+  "name": "Butler",
+  "description": "Each night, choose a player (but not yourself): the next day you may only vote if they are voting too.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:bell_jar"
+  }
+}

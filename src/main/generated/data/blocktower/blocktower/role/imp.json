@@ -1,0 +1,9 @@
+{
+  "type": "demon",
+  "name": "Imp",
+  "description": "Each night, except the first, choose a player: they die. If you kill yourself this way, a minion becomes the Imp.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:imp_trident"
+  }
+}

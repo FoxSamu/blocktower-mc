@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Virgin",
+  "description": "The first time you are nominated, if the nominator is a townsfolk, they will die immediately.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:ring"
+  }
+}

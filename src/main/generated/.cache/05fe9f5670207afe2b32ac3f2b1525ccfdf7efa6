@@ -1,0 +1,24 @@
+// 1.21.11	-999999999-01-01T00:00:00	Blood on the Blocktower/Regs
+6321f391d2386b126d375349c75b9c8eac1a563c data/blocktower/blocktower/role/baron.json
+3ab11c7362eff05e36dc07ef8aef3ceca9ebf20b data/blocktower/blocktower/role/butler.json
+3c18820046baf71b75dd24737df7a87879e43cf2 data/blocktower/blocktower/role/chef.json
+18135eb4fc519b5fc4834bad868e94522cc9b94f data/blocktower/blocktower/role/drunk.json
+59c50d7252c2c8cccb8c2be92ee0b46b85257be6 data/blocktower/blocktower/role/empath.json
+1eaf385d6ceffab5a21db7893dfb2fbd502e8625 data/blocktower/blocktower/role/fortune_teller.json
+11f360465095c8a1981ac6de77ea330d26ad356d data/blocktower/blocktower/role/imp.json
+837e742a9eb8b41a49446fce307a3f3b17f62215 data/blocktower/blocktower/role/investigator.json
+2af089f408697918b1f111b165d7d0678cf74634 data/blocktower/blocktower/role/librarian.json
+925ef4a52741ac823048e5b962ad59a708c94eab data/blocktower/blocktower/role/mayor.json
+dd4262baa4c5ced1fe472019f18a1e927514b5a2 data/blocktower/blocktower/role/monk.json
+8e5a32aaadf329d5013ee3267b6e8a8054beb058 data/blocktower/blocktower/role/poisoner.json
+e7ea9e90e738581db49865a6958dbeecdd7de5f2 data/blocktower/blocktower/role/ravenkeeper.json
+765c6bb7e5ecad375b98b628ff7fb9ea156ed009 data/blocktower/blocktower/role/recluse.json
+f7aed851e95af8ff05ad03a89c559f5f551e0d86 data/blocktower/blocktower/role/saint.json
+e276719b00a8c6e2c6e2edd45bb5cdeeeec850df data/blocktower/blocktower/role/scarlet_woman.json
+414f06b8311273ff6e3f72c572b363b358a409d2 data/blocktower/blocktower/role/slayer.json
+e2b684ab819bfdc85210242c7397f0462d284dee data/blocktower/blocktower/role/soldier.json
+f13021609fc6f50cd880f8cd6f7c01896c3486a1 data/blocktower/blocktower/role/spy.json
+70c83e62f8579ada6d78c829926bd889d0949494 data/blocktower/blocktower/role/undertaker.json
+0673e9a8dcb661fbe29fbae9717688ffb971714b data/blocktower/blocktower/role/virgin.json
+447af987e01d2290c966e9adea3a5b7457ffb819 data/blocktower/blocktower/role/washerwoman.json
+a006d3a26d379ed4441e2ee25481d6416c02427d data/blocktower/blocktower/script/trouble_brewing.json

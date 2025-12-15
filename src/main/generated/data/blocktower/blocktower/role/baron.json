@@ -1,0 +1,9 @@
+{
+  "type": "minion",
+  "name": "Baron",
+  "description": "There are 2 extra outsiders in play.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:top_hat"
+  }
+}

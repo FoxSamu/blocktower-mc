@@ -1,0 +1,18 @@
+{
+  "type": "townsfolk",
+  "name": "Fortune Teller",
+  "description": "Each night, choose two players: you'll learn if either is a demon. There is a good player that registers as a demon to you.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:glass_orb"
+  },
+  "tokens": [
+    {
+      "name": "Red Herring",
+      "icon": {
+        "count": 1,
+        "id": "minecraft:salmon"
+      }
+    }
+  ]
+}

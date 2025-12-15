@@ -1,0 +1,9 @@
+{
+  "type": "outsider",
+  "name": "Saint",
+  "description": "If you die by execution, your team loses.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:saint_wings"
+  }
+}

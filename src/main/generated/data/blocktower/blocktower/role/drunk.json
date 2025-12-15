@@ -1,0 +1,18 @@
+{
+  "type": "outsider",
+  "name": "Drunk",
+  "description": "You do not know that you are the drunk. You think you are a townsfolk character, but you are not.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:beer"
+  },
+  "tokens": [
+    {
+      "name": "Is Drunk",
+      "icon": {
+        "count": 1,
+        "id": "blocktower:beer"
+      }
+    }
+  ]
+}

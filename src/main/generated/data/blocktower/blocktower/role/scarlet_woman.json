@@ -1,0 +1,9 @@
+{
+  "type": "minion",
+  "name": "Scarlet Woman",
+  "description": "If there are 5 or more player alive (not counting travellers), and the demon dies, then you become the demon.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:kiss"
+  }
+}

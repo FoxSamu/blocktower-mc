@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Undertaker",
+  "description": "Each night, except the first, you learn which character died by execution the day before.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:big_shovel"
+  }
+}

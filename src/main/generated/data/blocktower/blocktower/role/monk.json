@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Monk",
+  "description": "Each night, except the first, choose a player (but not yourself): they are safe from the demon tonight.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:cross"
+  }
+}

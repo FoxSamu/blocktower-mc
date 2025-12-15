@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Slayer",
+  "description": "Once per game, during the day, publicly choose a player: if they are a demon, they die.",
+  "icon": {
+    "count": 1,
+    "id": "minecraft:crossbow"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Ravenkeeper",
+  "description": "If you die at night, you are woken to choose a player: you will learn their role.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:raven"
+  }
+}

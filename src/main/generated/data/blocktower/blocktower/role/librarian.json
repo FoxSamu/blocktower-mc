@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Librarian",
+  "description": "You start knowing that 1 of 2 people is a particular outsider (or that none are in play).",
+  "icon": {
+    "count": 1,
+    "id": "minecraft:book"
+  }
+}

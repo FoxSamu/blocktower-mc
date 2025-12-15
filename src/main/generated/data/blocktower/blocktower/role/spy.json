@@ -1,0 +1,9 @@
+{
+  "type": "minion",
+  "name": "Spy",
+  "description": "Each night, you see the grimoire. You might register as a townsfolk or outsider, even if dead.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:mask"
+  }
+}

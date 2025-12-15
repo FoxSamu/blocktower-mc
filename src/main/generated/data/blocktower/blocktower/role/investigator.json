@@ -1,0 +1,9 @@
+{
+  "type": "townsfolk",
+  "name": "Investigator",
+  "description": "You start knowing that 1 of 2 people is a particular minion.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:magnifying_glass"
+  }
+}

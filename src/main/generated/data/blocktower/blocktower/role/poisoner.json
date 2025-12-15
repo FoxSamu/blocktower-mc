@@ -1,0 +1,18 @@
+{
+  "type": "minion",
+  "name": "Poisoner",
+  "description": "Each night, choose a player: they are poisoned tonight and tomorrow.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:poison_bottle"
+  },
+  "tokens": [
+    {
+      "name": "Poisoned",
+      "icon": {
+        "count": 1,
+        "id": "blocktower:poison_bottle"
+      }
+    }
+  ]
+}

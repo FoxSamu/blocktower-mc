@@ -1,0 +1,54 @@
+{
+    "schemaVersion": 1,
+
+    "id": "blocktower",
+    "version": "${version}",
+
+    "name": "Blood on the Blocktower",
+    "description": "Inspired by the Blood on the Clocktower episodes of Yogscast, this mod is a Minecraft adaptation of BOTC, providing the utilities to play BOTC in Minecraft. Blood on the Clocktower is copyright of The Pandemonium Institute - this mod is an independent adaptation and is not affiliated with the original game or its creators.",
+
+    "authors": [
+        "Samū"
+    ],
+
+    "contact": {
+        "homepage": "https://runefox.dev/"
+    },
+
+    "license": "GPLv3",
+    "icon": "assets/blocktower/textures/icon.png",
+
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            {
+                "adapter": "kotlin",
+                "value": "dev.runefox.blocktower.Mod"
+            }
+        ],
+        "client": [
+        ],
+        "fabric-datagen": [
+            {
+                "adapter": "kotlin",
+                "value": "dev.runefox.blocktower.Datagen"
+            }
+        ]
+    },
+
+    "mixins": [
+        "blocktower.mixins.json"
+    ],
+
+    "depends": {
+        "fabricloader": ">=0.18.2",
+        "minecraft": "~1.21.11",
+        "java": ">=21",
+        "fabric-api": "*",
+        "fabric-language-kotlin": ">=1.13.7+kotlin.2.2.21"
+    },
+
+    "suggests": {
+        "another-mod": "*"
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "townsfolk",
+  "name": "Mayor",
+  "description": "If only three players remain, and no execution occurs, your team wins. If you die at night, another player may die instead.",
+  "icon": {
+    "count": 1,
+    "id": "blocktower:courthouse"
+  },
+  "rules": [
+    {
+      "description": "Another player may die.",
+      "condition": "If killed at night"
+    }
+  ]
+}
