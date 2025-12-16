@@ -87,7 +87,7 @@ tasks.withType<Jar> {
     from(sourceSets["mixin"].output.dirs)
     from(sourceSets["mixin"].output.resourcesDir)
 
-	from("LICENSE") {
-		rename { "${it}_${inputs.properties["archivesName"]}"}
+	from("LICENSE.md") {
+		rename { "LICENSE_${inputs.properties["archivesName"]}.md"}
 	}
 }
