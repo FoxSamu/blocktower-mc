@@ -6,6 +6,9 @@ import net.fabricmc.api.Environment
 import net.minecraft.client.gui.GuiGraphics
 import net.minecraft.client.gui.screens.Screen
 
+/**
+ * Screen that displays a script. Opened when a script item is clicked.
+ */
 @Environment(EnvType.CLIENT)
 class ScriptScreen : Screen(GuiTexts.SCRIPT_OVERVIEW) {
     override fun render(g: GuiGraphics, mouseX: Int, mouseY: Int, partialTick: Float) {
