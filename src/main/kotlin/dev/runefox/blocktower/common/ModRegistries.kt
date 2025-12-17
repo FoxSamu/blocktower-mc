@@ -1,7 +1,9 @@
-package dev.runefox.blocktower
+package dev.runefox.blocktower.common
 
-import dev.runefox.blocktower.util.blocktower
-import dev.runefox.blocktower.util.registry
+import dev.runefox.blocktower.common.model.Role
+import dev.runefox.blocktower.common.model.Script
+import dev.runefox.blocktower.common.util.blocktower
+import dev.runefox.blocktower.common.util.registry
 import net.fabricmc.fabric.api.event.registry.DynamicRegistries
 
 object ModRegistries {

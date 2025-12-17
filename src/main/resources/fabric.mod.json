@@ -23,15 +23,19 @@
         "main": [
             {
                 "adapter": "kotlin",
-                "value": "dev.runefox.blocktower.Mod"
+                "value": "dev.runefox.blocktower.common.Mod"
             }
         ],
         "client": [
+            {
+                "adapter": "kotlin",
+                "value": "dev.runefox.blocktower.client.ModClient"
+            }
         ],
         "fabric-datagen": [
             {
                 "adapter": "kotlin",
-                "value": "dev.runefox.blocktower.Datagen"
+                "value": "dev.runefox.blocktower.data.Datagen"
             }
         ]
     },

@@ -1,6 +1,9 @@
-package dev.runefox.blocktower
+package dev.runefox.blocktower.data
 
 import com.mojang.serialization.Lifecycle
+import dev.runefox.blocktower.common.ModRegistries
+import dev.runefox.blocktower.common.ModRoles
+import dev.runefox.blocktower.common.ModScripts
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
@@ -20,9 +23,10 @@ import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.resources.ResourceKey
 import net.minecraft.world.item.Item
 import java.util.concurrent.CompletableFuture
+import kotlin.collections.iterator
 
 object Datagen : DataGeneratorEntrypoint {
-    val ROLE_ITEMS = mutableListOf<Item>()
+    val FLAT_ITEMS = mutableListOf<Item>()
     val TRANSLATIONS = mutableMapOf<String, String>()
 
     override fun onInitializeDataGenerator(gen: FabricDataGenerator) {
@@ -54,7 +58,7 @@ private class Models(output: FabricDataOutput) : FabricModelProvider(output) {
     }
 
     override fun generateItemModels(gen: ItemModelGenerators) {
-        for (item in Datagen.ROLE_ITEMS) {
+        for (item in Datagen.FLAT_ITEMS) {
             gen.generateFlatItem(item, ModelTemplates.FLAT_ITEM)
         }
     }

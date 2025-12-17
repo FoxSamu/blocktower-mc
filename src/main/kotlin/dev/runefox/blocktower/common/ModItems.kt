@@ -1,8 +1,13 @@
 @file:Suppress("unused")
 
-package dev.runefox.blocktower
+package dev.runefox.blocktower.common
 
-import dev.runefox.blocktower.util.*
+import dev.runefox.blocktower.data.Datagen
+import dev.runefox.blocktower.common.item.ScriptItem
+import dev.runefox.blocktower.common.util.blocktower
+import dev.runefox.blocktower.common.util.item
+import dev.runefox.blocktower.common.util.of
+import dev.runefox.blocktower.common.util.register
 import net.minecraft.core.registries.BuiltInRegistries
 
 import net.minecraft.core.registries.Registries
@@ -29,18 +34,31 @@ object ModItems {
     val SAINT_WINGS = roleIcon("saint_wings", "Saint's Wings")
     val TOP_HAT = roleIcon("top_hat", "Top Hat")
 
-    private fun roleIcon(name: String, defaultTranslation: String): Item {
+    val SCRIPT = script("script", "Script")
+
+
+    private inline fun register(
+        name: String,
+        defaultTranslation: String,
+        factory: (Item.Properties) -> Item,
+        config: Item.Properties.() -> Unit = {}
+    ) : Item {
         val key = blocktower(name) of Registries.ITEM
 
-        val item = item(::Item) {
+        val item = item(factory) {
+            config()
             setId(key)
         }
 
         BuiltInRegistries.ITEM.register(key, item)
 
-        Datagen.ROLE_ITEMS.add(item)
+        Datagen.FLAT_ITEMS.add(item)
         Datagen.TRANSLATIONS[item.descriptionId] = defaultTranslation
 
         return item
     }
+
+    private fun roleIcon(name: String, defaultTranslation: String) = register(name, defaultTranslation, ::Item)
+
+    private fun script(name: String, defaultTranslation: String) = register(name, defaultTranslation, ::ScriptItem)
 }

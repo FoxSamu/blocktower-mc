@@ -1,5 +1,6 @@
-package dev.runefox.blocktower.util
+package dev.runefox.blocktower.common.util
 
+import java.util.Optional
 import com.mojang.datafixers.kinds.App
 import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec
@@ -38,16 +39,21 @@ infix fun <E> Codec<E>.fieldOf(name: String): MapCodec<E> {
     return fieldOf(name)
 }
 
-infix fun <E> Codec<E>.fieldOf(name: OptionalField): MapCodec<E?> {
-    return optionalFieldOf(name.name, null)
+infix fun <E : Any> Codec<E>.fieldOf(name: OptionalField): MapCodec<Optional<E>> {
+    return optionalFieldOf(name.name)
 }
 
-infix fun <E> Codec<E>.fieldOf(name: OptionalFieldWithFallback<E>): MapCodec<E> {
+infix fun <E : Any> Codec<E>.fieldOf(name: OptionalFieldWithFallback<E>): MapCodec<E> {
     return optionalFieldOf(name.name, name.fallback)
 }
 
 inline infix fun <E, O> MapCodec<E>.forGetter(crossinline getter: O.() -> E): RecordCodecBuilder<O, E> {
     return forGetter { getter(it) }
+}
+
+inline infix fun <E, O> MapCodec<Optional<E>>.forNullGetter(crossinline getter: O.() -> E?): RecordCodecBuilder<O, Optional<E>> {
+    @Suppress("unchecked_cast")
+    return forGetter { Optional.ofNullable(getter(it)) as Optional<E> }
 }
 
 fun optional(name: String) = OptionalField(name)

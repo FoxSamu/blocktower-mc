@@ -17,6 +17,7 @@ a490035cf6c29f8a4253b59677878e62f503a055 assets/blocktower/items/poison_bottle.j
 2bee60e85e8fde5d8d1973f6ea75406280269d33 assets/blocktower/items/raven.json
 84930ada1b9d149d61611ec609fef9a8f0f1b59b assets/blocktower/items/ring.json
 7600575359cdabf86a4cd842d587e0c2c017acc6 assets/blocktower/items/saint_wings.json
+6070cd2ce80f8ab1785f7abc7eed76d30a3817d6 assets/blocktower/items/script.json
 67a9acf4ebdbd37b61a1195af989f67928db5f85 assets/blocktower/items/top_hat.json
 5ecd57543a64731818e3582e197b9af032a305f8 assets/blocktower/models/item/beer.json
 c53f7d65b07c4e9b7e58c268786e1d6f3c4a7c13 assets/blocktower/models/item/bell_jar.json
@@ -36,4 +37,5 @@ df3e19185db590ac14e508f897e14949c2c6f687 assets/blocktower/models/item/magnifyin
 6bb5b1bcf573ef2081136132c606aca028e0e558 assets/blocktower/models/item/raven.json
 e01e852d781fbfc40ca884e649f252224ee8ab0a assets/blocktower/models/item/ring.json
 3dd9de9d49d769038c1a9884ac30969d82519e77 assets/blocktower/models/item/saint_wings.json
+76d4a7c6066b46e29895d25d4dd3b7e116c857f2 assets/blocktower/models/item/script.json
 d4518e1eb19489a01e19c33ca85db8a1b05bccee assets/blocktower/models/item/top_hat.json

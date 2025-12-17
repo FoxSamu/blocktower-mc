@@ -1,5 +1,11 @@
-package dev.runefox.blocktower
+package dev.runefox.blocktower.common
 
+import dev.runefox.blocktower.common.util.DynamicDataHolder
+import dev.runefox.blocktower.common.model.Action
+import dev.runefox.blocktower.common.model.Distribution
+import dev.runefox.blocktower.common.model.Role
+import dev.runefox.blocktower.common.model.Rule
+import dev.runefox.blocktower.common.model.Script
 import net.minecraft.core.Holder
 import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.network.chat.Component

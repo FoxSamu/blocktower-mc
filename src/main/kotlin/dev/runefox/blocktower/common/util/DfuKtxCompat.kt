@@ -1,4 +1,4 @@
-package dev.runefox.blocktower.util
+package dev.runefox.blocktower.common.util
 
 import com.mojang.datafixers.util.Pair
 import com.mojang.serialization.DataResult

@@ -1,4 +1,5 @@
 {
+  "gui.blocktower.script_overview": "Script Overview",
   "item.blocktower.beer": "Jug of Beer",
   "item.blocktower.bell_jar": "Bell Jar",
   "item.blocktower.big_shovel": "Big Shovel",
@@ -17,5 +18,6 @@
   "item.blocktower.raven": "Raven",
   "item.blocktower.ring": "Ring",
   "item.blocktower.saint_wings": "Saint's Wings",
+  "item.blocktower.script": "Script",
   "item.blocktower.top_hat": "Top Hat"
 }

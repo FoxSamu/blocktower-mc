@@ -1,6 +1,10 @@
-package dev.runefox.blocktower
+package dev.runefox.blocktower.common
 
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider
+import dev.runefox.blocktower.common.util.DynamicDataHolder
+import dev.runefox.blocktower.common.model.Role
+import dev.runefox.blocktower.common.model.RoleType
+import dev.runefox.blocktower.common.model.Rule
+import dev.runefox.blocktower.common.model.Token
 import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.Item

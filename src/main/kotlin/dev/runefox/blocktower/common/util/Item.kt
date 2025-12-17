@@ -1,4 +1,4 @@
-package dev.runefox.blocktower.util
+package dev.runefox.blocktower.common.util
 
 import net.minecraft.world.item.Item
 

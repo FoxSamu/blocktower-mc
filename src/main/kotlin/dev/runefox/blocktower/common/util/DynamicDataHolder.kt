@@ -1,7 +1,6 @@
-package dev.runefox.blocktower
+package dev.runefox.blocktower.common.util
 
-import dev.runefox.blocktower.util.of
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider
+import dev.runefox.blocktower.common.Mod
 import net.minecraft.core.Registry
 import net.minecraft.data.worldgen.BootstrapContext
 import net.minecraft.resources.Identifier
