@@ -15,7 +15,7 @@ import net.minecraft.world.level.Level
 class ScriptItem(properties: Properties) : Item(properties) {
     override fun use(level: Level, player: Player, hand: InteractionHand): InteractionResult {
         if (!level.isClientSide && player is ServerPlayer) {
-            // TODO tie to script id
+            // TODO script item component
             NetServer.sendOpenScript(player, ModScripts.TROUBLE_BREWING)
         }
 

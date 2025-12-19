@@ -1,6 +1,5 @@
 package dev.runefox.blocktower.common
 
-import dev.runefox.blocktower.common.model.Codecs
 import dev.runefox.blocktower.common.model.Fabled
 import dev.runefox.blocktower.common.model.Role
 import dev.runefox.blocktower.common.model.Loric

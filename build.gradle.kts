@@ -12,10 +12,6 @@ base {
 	archivesName = "blocktower"
 }
 
-sourceSets {
-    create("mixin")
-}
-
 java {
     withSourcesJar()
 
@@ -33,7 +29,6 @@ loom {
     mods {
         create("blocktower") {
             sourceSet("main")
-            sourceSet("mixin")
         }
     }
 }
@@ -48,11 +43,11 @@ repositories {
     mavenCentral()
 }
 
+configurations.forEach { println(it.name) }
+
 dependencies {
 	minecraft("com.mojang:minecraft:1.21.11")
 	mappings(loom.officialMojangMappings())
-
-    implementation(sourceSets["mixin"].output)
 
 	modImplementation("net.fabricmc:fabric-loader:0.18.2")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:0.139.4+1.21.11")
@@ -85,9 +80,6 @@ tasks.withType<ProcessResources> {
 
 tasks.withType<Jar> {
 	inputs.property("archivesName", project.base.archivesName)
-
-    from(sourceSets["mixin"].output.dirs)
-    from(sourceSets["mixin"].output.resourcesDir)
 
 	from("LICENSE.md") {
 		rename { "LICENSE_${inputs.properties["archivesName"]}.md"}

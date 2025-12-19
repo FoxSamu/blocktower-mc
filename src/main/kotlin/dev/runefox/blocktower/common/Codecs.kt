@@ -1,23 +1,25 @@
-package dev.runefox.blocktower.common.model
+package dev.runefox.blocktower.common
 
 import com.mojang.datafixers.util.Either
 import com.mojang.serialization.Codec
 import com.mojang.serialization.DataResult
-import dev.runefox.blocktower.common.ModRegistries
+import dev.runefox.blocktower.common.map.TownSeat
 import dev.runefox.blocktower.common.model.NightOrder.*
+import dev.runefox.blocktower.common.model.*
 import dev.runefox.blocktower.common.util.*
 import net.minecraft.core.Holder
 import java.util.Optional
 import net.minecraft.network.chat.ComponentSerialization.CODEC as ComponentCodec
 import net.minecraft.world.item.ItemStack.CODEC as ItemStackCodec
+import net.minecraft.core.BlockPos.CODEC as BlockPosCodec
 
 object Codecs {
     val Component = ComponentCodec
     val ItemStack = ItemStackCodec
+    val BlockPos = BlockPosCodec
 
     val Alignment = enumCodec<Alignment>()
     val RoleType = enumCodec<RoleType>()
-    val CharacterType = enumCodec<CharacterType>()
 
     val String = Codec.STRING as Codec<String>
     val Int = Codec.INT as Codec<Int>
@@ -149,6 +151,16 @@ object Codecs {
 
     fun ScriptHolder(inline: Boolean) = Script.holder(ModRegistries.SCRIPT, inline)
     fun ScriptHolderSet(inline: Boolean) = Script.holderSet(ModRegistries.SCRIPT, inline)
+
+    val TownSeat = recordCodec<TownSeat> {
+        group(
+            BlockPos fieldOf "seat" forGetter { seatPos },
+            BlockPos fieldOf "bed" forGetter { bedPos },
+            BlockPos fieldOf "vote_lever" forGetter { voteLeverPos },
+            BlockPos fieldOf "vote_lamp" forGetter { voteLampPos },
+            Component fieldOf "house_name" forGetter { houseName }
+        ).apply(this, ::TownSeat)
+    }
 
     private fun createDistribution(): Codec<Distribution> {
         val range = Int(0..20)

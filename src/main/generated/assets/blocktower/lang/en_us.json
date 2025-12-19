@@ -1,4 +1,10 @@
 {
+  "commands.blocktower.town.already_has_town": "This world already has a Blocktower town",
+  "commands.blocktower.town.deleted": "The town of this world has been deleted",
+  "commands.blocktower.town.get_center": "The town center is at %s",
+  "commands.blocktower.town.has_no_town": "This world does not have a Blocktower town",
+  "commands.blocktower.town.initialized": "A new town was initialized for this world",
+  "commands.blocktower.town.set_center": "The town center has been set to %s",
   "gui.blocktower.script_overview": "Script Overview",
   "item.blocktower.beer": "Jug of Beer",
   "item.blocktower.bell_jar": "Bell Jar",

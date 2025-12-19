@@ -57,16 +57,10 @@ operator fun MutableComponent.plusAssign(component: Any?) {
     append(component.toString())
 }
 
-fun String.translate(fallback: String? = null): MutableComponent {
-    return Component.translatableWithFallback(this, fallback)
-}
-
-fun String.translate(vararg args: String, fallback: String? = null): MutableComponent {
-    return Component.translatableWithFallback(this, fallback, *args)
-}
-
-fun String.translate(args: Collection<String>, fallback: String? = null): MutableComponent {
-    return Component.translatableWithFallback(this, fallback, args)
+fun String.translate(fallback: String? = null): Formattable {
+    return Formattable {
+        Component.translatableWithFallback(this, fallback, *it.map { it ?: "null" }.toTypedArray())
+    }
 }
 
 fun T(vararg elements: Any?): Component {
@@ -88,3 +82,7 @@ fun interface MapStyle {
 
 val Italic = MapStyle { it.withItalic(true) }
 val Bold = MapStyle { it.withBold(true) }
+
+fun interface Formattable {
+    fun format(vararg args: Any?): Component
+}
