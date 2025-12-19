@@ -1,16 +1,12 @@
 package dev.runefox.blocktower.common.model
 
 import dev.runefox.blocktower.common.util.SerialEnum
-import dev.runefox.blocktower.common.util.enumCodec
+import net.minecraft.network.chat.Component
 
-enum class RoleType(override val serialName: String, val alignment: Alignment) : SerialEnum {
-    TOWNSFOLK("townsfolk", Alignment.GOOD),
-    OUTSIDER("outsider", Alignment.GOOD),
-    MINION("minion", Alignment.EVIL),
-    DEMON("demon", Alignment.EVIL),
-    TRAVELLER("traveller", Alignment.GOOD);
-
-    companion object {
-        val CODEC = enumCodec<RoleType>()
-    }
+enum class RoleType(override val serialName: String, val alignment: Alignment, val title: Component) : SerialEnum {
+    TOWNSFOLK("townsfolk", Alignment.GOOD, Component.literal("Townsfolk")),
+    OUTSIDER("outsider", Alignment.GOOD, Component.literal("Outsiders")),
+    MINION("minion", Alignment.EVIL, Component.literal("Minions")),
+    DEMON("demon", Alignment.EVIL, Component.literal("Demons")),
+    TRAVELLER("traveller", Alignment.GOOD, Component.literal("Travellers"));
 }

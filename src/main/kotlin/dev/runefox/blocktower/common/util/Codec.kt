@@ -2,7 +2,9 @@ package dev.runefox.blocktower.common.util
 
 import java.util.Optional
 import com.mojang.datafixers.kinds.App
+import com.mojang.datafixers.util.Either
 import com.mojang.serialization.Codec
+import com.mojang.serialization.DataResult
 import com.mojang.serialization.MapCodec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import com.mojang.serialization.codecs.UnboundedMapCodec
@@ -63,9 +65,26 @@ infix fun <K, V> Codec<K>.mapping(v: Codec<V>): UnboundedMapCodec<K, V> {
     return Codec.unboundedMap(this, v)
 }
 
-val <E> Codec<E>.list: Codec<List<E>> get() = listOf()
-val <E> Codec<E>.set: Codec<Set<E>> get() = list.xmap(List<E>::toSet, Set<E>::toList)
+infix fun <L, R> Codec<L>.or(v: Codec<R>): Codec<Either<L, R>> {
+    return Codec.either(this, v)
+}
 
+inline infix fun <T, reified U : T, reified V : T> Codec<U>.typeDispatch(v: Codec<V>): Codec<T> {
+    return Codec.either(this, v).flatXmap(
+        { DataResult.success(it.map({ v -> v }, { v -> v })) },
+        {
+            when (it) {
+                is U -> DataResult.success(Either.left(it))
+                is V -> DataResult.success(Either.right(it))
+                else -> DataResult.error { "Type dispatch failed" }
+            }
+        }
+    )
+}
+
+val <E> Codec<E>.List: Codec<List<E>> get() = listOf()
+fun <E> Codec<E>.List(range: IntRange): Codec<List<E>> = listOf(range.first, range.last)
+fun <E> Codec<E>.List(size: Int): Codec<List<E>> = listOf(size, size)
 
 class OptionalField(
     val name: String
@@ -75,3 +94,9 @@ class OptionalFieldWithFallback<out E>(
     val name: String,
     val fallback: E
 )
+
+
+
+fun <T> Either<T, T>.fold(): T {
+    return map({ it }, { it })
+}

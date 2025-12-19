@@ -1,15 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Mayor",
-  "description": "If only three players remain, and no execution occurs, your team wins. If you die at night, another player may die instead.",
+  "name": {
+    "extra": [
+      "Mayor"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "During the day, if only three players remain, and no execution occurs, your team wins. If you die at night, another player may die instead."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "We must put our differences aside, and cease this senseless killing. We are all taxpayers after all. Well, most of us."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:courthouse"
   },
-  "rules": [
-    {
-      "description": "Another player may die.",
-      "condition": "If killed at night"
-    }
-  ]
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Mayor"
 }

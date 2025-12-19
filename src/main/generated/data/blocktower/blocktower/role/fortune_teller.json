@@ -1,7 +1,23 @@
 {
   "type": "townsfolk",
-  "name": "Fortune Teller",
-  "description": "Each night, choose two players: you'll learn if either is a demon. There is a good player that registers as a demon to you.",
+  "name": {
+    "extra": [
+      "Fortune Teller"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, choose two players: you'll learn if either is a demon. There is a good player that registers as a demon to you."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "I sense great evil in your soul! But... that could just be your perfume. I am allergic to Elderberry."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:glass_orb"
@@ -14,5 +30,6 @@
         "id": "minecraft:salmon"
       }
     }
-  ]
+  ],
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Fortune_Teller"
 }

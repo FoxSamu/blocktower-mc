@@ -1,9 +1,26 @@
 {
   "type": "outsider",
-  "name": "Recluse",
-  "description": "You might register as a minion or demon, even if you're dead.",
+  "name": {
+    "extra": [
+      "Recluse"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "You might register as a minion or demon, even if you're dead."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Garn git ya darn grub ya mitts ofma lorn yasee. Grr. Natsy pikkins yonder southwise ye begittin afta ya! Git! Me harvy no so widda licks and demmons no be fightin' hadsup ne'er ma kin. Git, assay!"
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:gas_lamp"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Recluse"
 }

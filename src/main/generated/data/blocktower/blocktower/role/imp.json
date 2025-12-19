@@ -1,9 +1,26 @@
 {
   "type": "demon",
-  "name": "Imp",
-  "description": "Each night, except the first, choose a player: they die. If you kill yourself this way, a minion becomes the Imp.",
+  "name": {
+    "extra": [
+      "Imp"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, except the first, choose a player: they die. If you kill yourself this way, a minion becomes the Imp."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "We must keep our wits sharp and our sword sharper. Evil walks among us, and will stop at nothing to destroy us good, simple folk, bringing our fine town to ruin. Trust no-one. But, if you must trust someone, trust me."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:imp_trident"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Imp"
 }

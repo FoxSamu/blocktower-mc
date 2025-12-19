@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Empath",
-  "description": "Each night, you learn how many of your 2 alive neighbours are evil.",
+  "name": {
+    "extra": [
+      "Empath"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, you learn how many of your two alive neighbours are evil."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "My skin prickles. Something is not right here. I can feel it."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:empathy"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Empath"
 }

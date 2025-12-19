@@ -1,9 +1,26 @@
 {
   "type": "minion",
-  "name": "Spy",
-  "description": "Each night, you see the grimoire. You might register as a townsfolk or outsider, even if dead.",
+  "name": {
+    "extra": [
+      "Spy"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, you see the grimoire. You might register as a townsfolk or outsider, even if dead."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Any brewmaster worth their liquor, knows no concoction pours trouble quicker, than one where spies seem double."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:mask"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Spy"
 }

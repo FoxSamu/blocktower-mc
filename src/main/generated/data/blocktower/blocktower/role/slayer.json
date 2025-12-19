@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Slayer",
-  "description": "Once per game, during the day, publicly choose a player: if they are a demon, they die.",
+  "name": {
+    "extra": [
+      "Slayer"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Once per game, during the day, publicly choose a player: if they are a demon, they die."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Die."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "minecraft:crossbow"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Slayer"
 }

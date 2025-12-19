@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Librarian",
-  "description": "You start knowing that 1 of 2 people is a particular outsider (or that none are in play).",
+  "name": {
+    "extra": [
+      "Librarian"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "The first night, you learn that one of two people is a particular outsider, or that no outsiders are in play."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Certainly madam, under normal circumstances, you may borrow the Codex Malificarium from the library vaults. However, you do not seem to be a member."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "minecraft:book"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Librarian"
 }

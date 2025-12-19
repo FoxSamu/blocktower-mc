@@ -1,9 +1,26 @@
 {
   "type": "minion",
-  "name": "Baron",
-  "description": "There are 2 extra outsiders in play.",
+  "name": {
+    "extra": [
+      "Baron"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "There are 2 extra outsiders in play."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "This town has gone to the dogs, what? Cheap foreign labor... that's the ticket. Stuff them in the mine, I say. A bit of hard work never hurt anyone, and a clip'o'the ears to any brigand who says otherwise. It's all about the bottom line, what?"
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:top_hat"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Baron"
 }

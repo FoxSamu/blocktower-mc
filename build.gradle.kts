@@ -28,6 +28,8 @@ kotlin {
 }
 
 loom {
+    accessWidenerPath = file("$projectDir/src/main/resources/blocktower.accesswidener")
+
     mods {
         create("blocktower") {
             sourceSet("main")

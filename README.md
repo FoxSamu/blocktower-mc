@@ -6,11 +6,22 @@ Inspired by the Blood on the Clocktower episodes of Yogscast, this mod is a Mine
 - [x] Items for role icons
 - [x] Loading roles and scripts from datapacks
 - [x] Generating and loading Trouble Brewing script
+- [x] Script and role overview
 - [ ] Game state manager blocks
 - [ ] Grimoire item
 - [ ] Grimoire GUI
 - [ ] Trouble Brewing is playable
 - [ ] Implementations of items for other scripts
+
+## Screenshots
+
+![The Script item opens the script view](screenshots/screenshot_script_item.png)
+
+![Script view shows roles](screenshots/screenshot_script_roles.png)
+
+![Role screen](screenshots/screenshot_role.png)
+
+![Role icons are actually items](screenshots/screenshot_script_item_2.png)
 
 ## Dependencies
 To run this mod, you must use:

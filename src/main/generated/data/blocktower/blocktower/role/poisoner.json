@@ -1,7 +1,23 @@
 {
   "type": "minion",
-  "name": "Poisoner",
-  "description": "Each night, choose a player: they are poisoned tonight and tomorrow.",
+  "name": {
+    "extra": [
+      "Poisoner"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, choose a player: they are poisoned tonight and tomorrow."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Add compound Alpha to compound Beta... NOT TOO MUCH!"
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:poison_bottle"
@@ -14,5 +30,6 @@
         "id": "blocktower:poison_bottle"
       }
     }
-  ]
+  ],
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Poisoner"
 }

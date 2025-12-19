@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Monk",
-  "description": "Each night, except the first, choose a player (but not yourself): they are safe from the demon tonight.",
+  "name": {
+    "extra": [
+      "Monk"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, except the first night, choose a player other than yourself. The chosen player is safe from the demon tonight."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Tis an ill and deathly wind that blows tonight. Come, my brother, take shelter in the abbey while the storm rages. By my word, or by my life, you will be safe."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:cross"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Monk"
 }

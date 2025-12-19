@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Ravenkeeper",
-  "description": "If you die at night, you are woken to choose a player: you will learn their role.",
+  "name": {
+    "extra": [
+      "Ravenkeeper"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "If you die at night, you are woken to choose a player: you will learn their role."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "My birds will avenge me! Fly! Fly, my sweet and dutiful pets! To the manor and to the river! To the alleys and to the salons! Fly!"
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:raven"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Ravenkeeper"
 }

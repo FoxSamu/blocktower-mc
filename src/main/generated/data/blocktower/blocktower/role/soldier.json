@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Soldier",
-  "description": "You are safe from the demon.",
+  "name": {
+    "extra": [
+      "Soldier"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "You are safe from the demon."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "As David said to Goliath, as Theseus said to the Minotaur, as Arjuna said to Bhagadatta... No."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "minecraft:shield"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Soldier"
 }

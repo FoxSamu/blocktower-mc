@@ -1,9 +1,26 @@
 {
   "type": "outsider",
-  "name": "Saint",
-  "description": "If you die by execution, your team loses.",
+  "name": {
+    "extra": [
+      "Saint"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "If you die by execution, your team loses."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Wisdom begets peace. Patience begets wisdom. Fear not, for the time shall come when fear too shall pass. Let us pray, and may the unity of our vision make saints of us all."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:saint_wings"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Saint"
 }

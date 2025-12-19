@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Washerwoman",
-  "description": "You start knowing that 1 of 2 people is a particular townsfolk.",
+  "name": {
+    "extra": [
+      "Washerwoman"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "The first night, you learn that one of two people is a particular townsfolk."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Bloodstains on a dinner jacket? No, this is cooking sherry. How careless."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:clothesline"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Washerwoman"
 }

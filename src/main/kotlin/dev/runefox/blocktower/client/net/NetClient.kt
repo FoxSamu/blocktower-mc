@@ -15,6 +15,7 @@ object NetClient : Net() {
     }
 
     private fun showScript(payload: ShowScriptPayload, context: ClientPlayNetworking.Context) {
-        ScriptScreen().display()
+        val holder = context.player().registryAccess().getOrThrow(payload.script)
+        ScriptScreen(holder.value()).display()
     }
 }

@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Chef",
-  "description": "You start knowing how many pairs of evil players there are.",
+  "name": {
+    "extra": [
+      "Chef"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "The first night, you learn how many pairs of evil players there are. Each two evil players sitting next to eachother."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "This evening's reservations seem odd. Never before has Mrs Mayweather kept company with that scamp from Hudson Lane. Yet, tonight, they have a table for two. Strange."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:chef_hat"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Chef"
 }

@@ -1,9 +1,26 @@
 {
   "type": "townsfolk",
-  "name": "Virgin",
-  "description": "The first time you are nominated, if the nominator is a townsfolk, they will die immediately.",
+  "name": {
+    "extra": [
+      "Virgin"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "The first time you are nominated, if the nominator is a townsfolk, they will die immediately."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "I am pure. Let those who are without sin cast themselves down and suffer in my stead. My reputation shall not be stained with your venomous accusations."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:ring"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Virgin"
 }

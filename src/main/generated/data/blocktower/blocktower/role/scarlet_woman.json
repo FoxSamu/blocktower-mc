@@ -1,9 +1,26 @@
 {
   "type": "minion",
-  "name": "Scarlet Woman",
-  "description": "If there are 5 or more player alive (not counting travellers), and the demon dies, then you become the demon.",
+  "name": {
+    "extra": [
+      "Scarlet Woman"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "If there are 5 or more player alive (not counting travellers), and the demon dies, then you become the demon."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "You have shown me the secrets of the Council of the Purple Flame. We have lain together in fire and in lust and in beastly commune, and I am forever your servant. But tonight, my dear, I am your master."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:kiss"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Scarlet_Woman"
 }

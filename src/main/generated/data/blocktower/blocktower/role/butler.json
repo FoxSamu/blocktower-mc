@@ -1,9 +1,26 @@
 {
   "type": "outsider",
-  "name": "Butler",
-  "description": "Each night, choose a player (but not yourself): the next day you may only vote if they are voting too.",
+  "name": {
+    "extra": [
+      "Butler"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "Each night, choose a player (but not yourself): the next day you may only vote if they are voting too."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Yes, sir...\nNo, sir...\nCertainly, sir."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:bell_jar"
-  }
+  },
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Butler"
 }

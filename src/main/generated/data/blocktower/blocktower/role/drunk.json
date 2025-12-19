@@ -1,7 +1,23 @@
 {
   "type": "outsider",
-  "name": "Drunk",
-  "description": "You do not know that you are the drunk. You think you are a townsfolk character, but you are not.",
+  "name": {
+    "extra": [
+      "Drunk"
+    ],
+    "text": ""
+  },
+  "description": {
+    "extra": [
+      "You do not know that you are the drunk. You think you are a townsfolk character, but you are not."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "I’m only a *hic* social drinker, my dear. Admittedly, I am a heavy *burp* socializer."
+    ],
+    "text": ""
+  },
   "icon": {
     "count": 1,
     "id": "blocktower:beer"
@@ -14,5 +30,6 @@
         "id": "blocktower:beer"
       }
     }
-  ]
+  ],
+  "wiki_url": "https://wiki.bloodontheclocktower.com/Drunk"
 }

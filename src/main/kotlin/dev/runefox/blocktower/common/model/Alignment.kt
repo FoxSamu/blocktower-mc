@@ -1,13 +1,12 @@
 package dev.runefox.blocktower.common.model
 
 import dev.runefox.blocktower.common.util.SerialEnum
-import dev.runefox.blocktower.common.util.enumCodec
+import net.minecraft.ChatFormatting
 
-enum class Alignment(override val serialName: String) : SerialEnum {
-    GOOD("good"),
-    EVIL("evil");
-
-    companion object {
-        val CODEC = enumCodec<Alignment>()
-    }
+enum class Alignment(
+    override val serialName: String,
+    val style: CharacterStyle
+) : SerialEnum {
+    GOOD("good", CharacterStyle.GOOD),
+    EVIL("evil", CharacterStyle.EVIL)
 }

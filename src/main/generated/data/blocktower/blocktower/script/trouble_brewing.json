@@ -1,207 +1,137 @@
 {
-  "name": "Trouble Brewing",
-  "description": "Trouble Brewing has a little bit of everything. Some characters passively receive information, some need to take action to learn who is who, while some simply want to bait the Demon into attacking them. Both good and evil can gain the upper hand by making well-timed sacrifices. Trouble Brewing is a relatively straightforward Demon-hunt, but evil has a number of dastardly misinformation tricks up their sleeves, so the good players best question what they think they know if they hope to survive.",
-  "distribution": [
-    {
-      "demons": 1,
-      "minions": 1,
-      "outsiders": 0,
-      "townsfolk": 3
-    },
-    {
-      "demons": 1,
-      "minions": 1,
-      "outsiders": 1,
-      "townsfolk": 3
-    },
-    {
-      "demons": 1,
-      "minions": 1,
-      "outsiders": 0,
-      "townsfolk": 5
-    },
-    {
-      "demons": 1,
-      "minions": 1,
-      "outsiders": 1,
-      "townsfolk": 5
-    },
-    {
-      "demons": 1,
-      "minions": 1,
-      "outsiders": 2,
-      "townsfolk": 5
-    },
-    {
-      "demons": 1,
-      "minions": 2,
-      "outsiders": 0,
-      "townsfolk": 7
-    },
-    {
-      "demons": 1,
-      "minions": 2,
-      "outsiders": 1,
-      "townsfolk": 7
-    },
-    {
-      "demons": 1,
-      "minions": 2,
-      "outsiders": 2,
-      "townsfolk": 7
-    },
-    {
-      "demons": 1,
-      "minions": 3,
-      "outsiders": 0,
-      "townsfolk": 9
-    },
-    {
-      "demons": 1,
-      "minions": 3,
-      "outsiders": 1,
-      "townsfolk": 9
-    },
-    {
-      "demons": 1,
-      "minions": 3,
-      "outsiders": 2,
-      "townsfolk": 9
-    }
-  ],
-  "first_night_order": [
-    {
-      "role": "poisoner",
-      "description": "Picks a player to poison."
-    },
-    {
-      "role": "washerwoman",
-      "description": "Receives a townsfolk role in play and two players of which one is that townsfolk."
-    },
-    {
-      "role": "librarian",
-      "description": "Receives an outsider role in play and two players of which one is that outsider."
-    },
-    {
-      "role": "investigator",
-      "description": "Receives a minion role in play and two players of which one is that minion."
-    },
-    {
-      "role": "chef",
-      "description": "Receives number of pairs of neighbouring evil players."
-    },
-    {
-      "role": "empath",
-      "description": "Receives the number of evil alive neighbours (0, 1, or 2)."
-    },
-    {
-      "role": "fortune_teller",
-      "description": "Picks two players and learns if either of them is a demon or red herring."
-    },
-    {
-      "role": "butler",
-      "description": "Picks a player to become their master."
-    },
-    {
-      "role": "spy",
-      "description": "Gets to see the grimoire."
-    }
-  ],
-  "min_players": 5,
-  "night_order": [
-    {
-      "role": "poisoner",
-      "description": "Picks a player to poison."
-    },
-    {
-      "role": "monk",
-      "description": "Picks a player to protect (not themself)."
-    },
-    {
-      "role": "scarlet_woman",
-      "description": "Becomes the imp.",
-      "condition": "If demon died last day"
-    },
-    {
-      "role": "imp",
-      "description": "Picks a player to kill."
-    },
-    {
-      "role": "imp",
-      "description": "Moves to a minion.",
-      "condition": "If demon killed themself"
-    },
-    {
-      "role": "ravenkeeper",
-      "description": "Picks a player and receives their role.",
-      "condition": "If killed this night"
-    },
-    {
-      "role": "empath",
-      "description": "Receives the number of evil alive neighbours (0, 1, or 2)."
-    },
-    {
-      "role": "fortune_teller",
-      "description": "Picks two players and learns if either of them is a demon or red herring."
-    },
-    {
-      "role": "undertaker",
-      "description": "Learns the role of the executed player.",
-      "condition": "If a player was executed"
-    },
-    {
-      "role": "butler",
-      "description": "Picks a player to become their master."
-    },
-    {
-      "role": "spy",
-      "description": "Gets to see the grimoire."
-    }
-  ],
-  "roles": {
-    "baron": "blocktower:baron",
-    "butler": "blocktower:butler",
-    "chef": "blocktower:chef",
-    "drunk": "blocktower:drunk",
-    "empath": "blocktower:empath",
-    "fortune_teller": "blocktower:fortune_teller",
-    "imp": "blocktower:imp",
-    "investigator": "blocktower:investigator",
-    "librarian": "blocktower:librarian",
-    "mayor": "blocktower:mayor",
-    "monk": "blocktower:monk",
-    "poisoner": "blocktower:poisoner",
-    "ravenkeeper": "blocktower:ravenkeeper",
-    "recluse": "blocktower:recluse",
-    "saint": "blocktower:saint",
-    "scarlet_woman": "blocktower:scarlet_woman",
-    "slayer": "blocktower:slayer",
-    "soldier": "blocktower:soldier",
-    "spy": "blocktower:spy",
-    "undertaker": "blocktower:undertaker",
-    "virgin": "blocktower:virgin",
-    "washerwoman": "blocktower:washerwoman"
+  "name": {
+    "extra": [
+      "Trouble Brewing"
+    ],
+    "text": ""
   },
-  "setup_order": [
-    {
-      "description": "Assign who is the Drunk.",
-      "condition": "If the Drunk is in play"
-    },
-    {
-      "description": "Assign who is the red herring.",
-      "condition": "If the Fortune Teller is in play"
-    },
-    {
-      "description": "Tell each minion who is the Imp.",
-      "condition": "If 7 or more players"
-    },
-    {
-      "description": "Tell the Imp who the minions are.",
-      "condition": "If 7 or more players"
-    },
-    {
-      "description": "Tell the Imp 3 characters not in play as bluffs.",
-      "condition": "If 7 or more players"
-    }
+  "description": {
+    "extra": [
+      "Trouble Brewing has a little bit of everything. Some characters passively receive information, some need to take action to learn who is who, while some simply want to bait the Demon into attacking them. Both good and evil can gain the upper hand by making well-timed sacrifices. Trouble Brewing is a relatively straightforward Demon-hunt, but evil has a number of dastardly misinformation tricks up their sleeves, so the good players best question what they think they know if they hope to survive."
+    ],
+    "text": ""
+  },
+  "lore": {
+    "extra": [
+      "Clouds roll in over Ravenswood Bluff, engulfing this sleepy town and its superstitious inhabitants in foreboding shadow. Freshly-washed clothes dance eerily on lines strung between cottages. Chimneys cough plumes of smoke into the air. Exotic scents waft through cracks in windows and under doors, as hidden cauldrons lay bubbling. An unusually warm Autumn breeze wraps around vine-covered walls and whispers ominously to those brave enough to walk the cobbled streets.\n\nAnxious mothers call their children home from play, as thunder begins to clap on the horizon. If you listen more closely, however, noises stranger still can be heard echoing from the neighbouring forest. Under the watchful eye of a looming monastery, silhouetted figures skip from doorway to doorway. Those who can read the signs know there is... Trouble Brewing."
+    ],
+    "text": ""
+  },
+  "distributions": [
+    [
+      3,
+      0,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      1,
+      1
+    ],
+    [
+      5,
+      0,
+      1,
+      1
+    ],
+    [
+      5,
+      1,
+      1,
+      1
+    ],
+    [
+      5,
+      2,
+      1,
+      1
+    ],
+    [
+      7,
+      0,
+      2,
+      1
+    ],
+    [
+      7,
+      1,
+      2,
+      1
+    ],
+    [
+      7,
+      2,
+      2,
+      1
+    ],
+    [
+      9,
+      0,
+      3,
+      1
+    ],
+    [
+      9,
+      1,
+      3,
+      1
+    ],
+    [
+      9,
+      2,
+      3,
+      1
+    ]
+  ],
+  "night_order": {
+    "first": [
+      "poisoner",
+      "washerwoman",
+      "librarian",
+      "investigator",
+      "chef",
+      "empath",
+      "fortune_teller",
+      "butler",
+      "spy"
+    ],
+    "other": [
+      "poisoner",
+      "monk",
+      "scarlet_woman",
+      "imp",
+      "ravenkeeper",
+      "empath",
+      "fortune_teller",
+      "undertaker",
+      "butler",
+      "spy"
+    ]
+  },
+  "roles": [
+    "blocktower:washerwoman",
+    "blocktower:librarian",
+    "blocktower:investigator",
+    "blocktower:chef",
+    "blocktower:empath",
+    "blocktower:fortune_teller",
+    "blocktower:undertaker",
+    "blocktower:monk",
+    "blocktower:ravenkeeper",
+    "blocktower:virgin",
+    "blocktower:slayer",
+    "blocktower:soldier",
+    "blocktower:mayor",
+    "blocktower:butler",
+    "blocktower:saint",
+    "blocktower:recluse",
+    "blocktower:drunk",
+    "blocktower:poisoner",
+    "blocktower:spy",
+    "blocktower:baron",
+    "blocktower:scarlet_woman",
+    "blocktower:imp"
   ]
 }
