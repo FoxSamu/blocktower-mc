@@ -3,11 +3,15 @@ package dev.runefox.blocktower.common
 import com.mojang.datafixers.util.Either
 import com.mojang.serialization.Codec
 import com.mojang.serialization.DataResult
+import dev.runefox.blocktower.common.map.Location
 import dev.runefox.blocktower.common.map.TownSeat
 import dev.runefox.blocktower.common.model.NightOrder.*
 import dev.runefox.blocktower.common.model.*
 import dev.runefox.blocktower.common.util.*
 import net.minecraft.core.Holder
+import net.minecraft.core.Registry
+import net.minecraft.core.registries.Registries
+import net.minecraft.resources.ResourceKey
 import java.util.Optional
 import net.minecraft.network.chat.ComponentSerialization.CODEC as ComponentCodec
 import net.minecraft.world.item.ItemStack.CODEC as ItemStackCodec
@@ -25,6 +29,10 @@ object Codecs {
     val Int = Codec.INT as Codec<Int>
 
     fun Int(range: IntRange) = Codec.intRange(range.first, range.last) as Codec<Int>
+
+    fun <T : Any> ResourceKey(registry: ResourceKey<out Registry<T>>): Codec<ResourceKey<T>> {
+        return ResourceKey.codec(registry)
+    }
 
     val Rule = recordCodec<Rule> {
         group(
@@ -152,12 +160,19 @@ object Codecs {
     fun ScriptHolder(inline: Boolean) = Script.holder(ModRegistries.SCRIPT, inline)
     fun ScriptHolderSet(inline: Boolean) = Script.holderSet(ModRegistries.SCRIPT, inline)
 
+    val Location = recordCodec<Location> {
+        group(
+            ResourceKey(Registries.DIMENSION) fieldOf "dimension" forGetter { dimension },
+            BlockPos fieldOf "pos" forGetter { pos }
+        ).apply(this, ::Location)
+    }
+
     val TownSeat = recordCodec<TownSeat> {
         group(
-            BlockPos fieldOf "seat" forGetter { seatPos },
-            BlockPos fieldOf "bed" forGetter { bedPos },
-            BlockPos fieldOf "vote_lever" forGetter { voteLeverPos },
-            BlockPos fieldOf "vote_lamp" forGetter { voteLampPos },
+            Location fieldOf "seat" forGetter { seatPos },
+            Location fieldOf "bed" forGetter { bedPos },
+            Location fieldOf "vote_lever" forGetter { voteLeverPos },
+            Location fieldOf "vote_lamp" forGetter { voteLampPos },
             Component fieldOf "house_name" forGetter { houseName }
         ).apply(this, ::TownSeat)
     }

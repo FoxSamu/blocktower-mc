@@ -7,7 +7,7 @@ Inspired by the Blood on the Clocktower episodes of Yogscast, this mod is a Mine
 - [x] Loading roles and scripts from datapacks
 - [x] Generating and loading Trouble Brewing script
 - [x] Script and role overview
-- [ ] Game state manager blocks
+- [ ] Map maker tools (in progress)
 - [ ] Grimoire item
 - [ ] Grimoire GUI
 - [ ] Trouble Brewing is playable

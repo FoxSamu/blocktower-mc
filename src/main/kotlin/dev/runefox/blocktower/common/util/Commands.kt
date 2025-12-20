@@ -1,6 +1,5 @@
 package dev.runefox.blocktower.common.util
 
-import com.ibm.icu.text.PluralRules
 import com.mojang.brigadier.CommandDispatcher
 import com.mojang.brigadier.LiteralMessage
 import com.mojang.brigadier.arguments.ArgumentType
@@ -8,7 +7,6 @@ import com.mojang.brigadier.builder.ArgumentBuilder
 import com.mojang.brigadier.builder.LiteralArgumentBuilder
 import com.mojang.brigadier.builder.RequiredArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
-import com.mojang.brigadier.exceptions.CommandExceptionType
 import com.mojang.brigadier.exceptions.CommandSyntaxException
 import com.mojang.brigadier.exceptions.Dynamic2CommandExceptionType
 import com.mojang.brigadier.exceptions.Dynamic3CommandExceptionType
@@ -18,10 +16,13 @@ import com.mojang.brigadier.exceptions.DynamicNCommandExceptionType
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType
 import com.mojang.brigadier.tree.CommandNode
 import com.mojang.brigadier.tree.LiteralCommandNode
+import com.mojang.serialization.Codec
 import dev.runefox.blocktower.common.Mod
 import net.minecraft.commands.CommandSourceStack
 import net.minecraft.commands.Commands
+import net.minecraft.commands.arguments.StringRepresentableArgument
 import net.minecraft.network.chat.Component
+import java.util.function.Supplier
 import kotlin.jvm.java
 import kotlin.reflect.KClass
 
@@ -140,10 +141,18 @@ fun GameCommandContext.failure(message: Formattable) {
     source.sendFailure(message.format())
 }
 
+fun GameCommandContext.failure(message: Component) {
+    source.sendFailure(message)
+}
+
 fun GameCommandContext.success(message: Formattable, a: Any?, vararg args: Any?, broadcast: Boolean = false) {
     source.sendSuccess({ message.format(a, *args) }, broadcast)
 }
 
 fun GameCommandContext.success(message: Formattable, broadcast: Boolean = false) {
     source.sendSuccess({ message.format() }, broadcast)
+}
+
+fun GameCommandContext.success(message: Component, broadcast: Boolean = false) {
+    source.sendSuccess({ message }, broadcast)
 }

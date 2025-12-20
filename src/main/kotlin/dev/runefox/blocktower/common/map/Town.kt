@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos
 import net.minecraft.nbt.NbtIo
 import net.minecraft.server.MinecraftServer
 import net.minecraft.util.ProblemReporter
+import net.minecraft.world.level.Level
 import net.minecraft.world.level.storage.TagValueInput
 import net.minecraft.world.level.storage.TagValueOutput
 import net.minecraft.world.level.storage.ValueInput
@@ -14,38 +15,77 @@ import net.minecraft.world.level.storage.ValueOutput
 import java.util.*
 import kotlin.io.path.createDirectories
 import kotlin.io.path.deleteIfExists
+import kotlin.math.max
 
 class Town(val server: MinecraftServer) {
-    // TODO include dimension
-    var center = BlockPos(0, 0, 0)
+    var center = Location(Level.OVERWORLD, BlockPos(0, 0, 0))
 
     private val seats = EnumMap<SeatColor, TownSeat>(SeatColor::class.java)
 
+    fun seats() = seats.toSortedMap()
+
+    fun clearSeats() {
+        seats.clear()
+    }
+
     fun addSeat(color: SeatColor, seat: TownSeat): Int {
         if (color in seats) {
-            return 1
+            return -1
         }
 
         seats[color] = seat
-        return 0
+        return color.ordinal
     }
 
     fun addSeat(seat: TownSeat): Int {
-        val color = SeatColor.entries.find { it !in seats } ?: return 2
+        val color = SeatColor.entries.find { it !in seats } ?: return -3
         return addSeat(color, seat)
     }
 
     fun removeSeat(color: SeatColor): Int {
-        return if (seats.remove(color) != null) 0 else 2
+        return if (seats.remove(color) != null) color.ordinal else -2
     }
 
     fun moveSeat(from: SeatColor, to: SeatColor): Int {
-        val seat = seats.remove(from) ?: return 2
+        val seat = seats.remove(from) ?: return -2
         return addSeat(to, seat)
     }
 
+    fun allocateAtLeast(amount: Int): Int {
+        if (amount > SeatColor.entries.size) {
+            return -3
+        }
+
+        while (seats.size < amount) {
+            if (addSeat(TownSeat()) == -3) {
+                break
+            }
+        }
+
+        return 0
+    }
+
+    fun allocateAtMost(amount: Int): Int {
+        val colors = SeatColor.entries.reversed()
+
+        for (color in colors) {
+            if (colors.size <= max(0, amount)) {
+                break
+            }
+
+            removeSeat(color)
+        }
+
+        return 0
+    }
+
+    fun allocateExactly(amount: Int): Int {
+        allocateAtMost(amount)
+        return allocateAtLeast(amount)
+    }
+
     private fun store(root: ValueOutput) {
-        root.store("center", Codecs.BlockPos, center)
+        root.store("center", Codecs.Location, center)
 
         val seats = root.child("seats")
         for ((color, seat) in this.seats) {
@@ -54,7 +94,7 @@ class Town(val server: MinecraftServer) {
     }
 
     private fun load(root: ValueInput) {
-        center = root.read("center", Codecs.BlockPos).unwrap() ?: BlockPos(0, 0, 0)
+        center = root.read("center", Codecs.Location).unwrap() ?: Location(Level.OVERWORLD, BlockPos(0, 0, 0))
 
         this.seats.clear()
         val seats = root.childOrEmpty("seats")
